@@ -16,14 +16,14 @@ subsites:
 - **Repositories with activity:** 20
 - **New issues:** 41
 - **Issues closed:** 24
-- **PRs opened:** 146
-- **PRs merged:** 84
+- **PRs opened:** 148
+- **PRs merged:** 85
 - **Contributors:** 58
 
 
 ### Highlights
 
-The Galaxy Project released version 26.0 release candidate 1 and continued development on version 26.1, adding an AI-powered tool recommendation feature and fixing various workflow and authentication issues. The project's documentation hub received updates to resolve technical problems with the Astro framework and added several new event pages. Tool repositories were updated with regular automated installations and version updates, including three new tools (PIRATE, Mgnify genome search, and datavrzd) and fixes for tools causing failures on Galaxy instances. The analytics platform gained LLM-powered natural language search functionality and improved workflows quality control reporting.
+The Galaxy Project released version 26.0.rc1 and started development on version 26.1, with fixes to workflow functionality, user sharing components, and storage management for anonymous users. The project added new analysis tools including PIRATE and Mgnify genome search, while updating existing tools like VGP processcuration and fastp. The galaxy-hub repository received updates for upcoming events and training materials, including workshops and the 2026 Metagenome Training Course. The brc-analytics component released version 0.21.0 with natural language search capabilities powered by large language models and a new white papers section.
 
 
 ## Most Active Repositories
@@ -31,7 +31,7 @@ The Galaxy Project released version 26.0 release candidate 1 and continued devel
 | Repository | PRs Opened | PRs Merged | Issues Opened | Issues Closed |
 |------------|------------|------------|---------------|---------------|
 | [galaxy](https://github.com/galaxyproject/galaxy) | 41 | 24 | 16 | 13 |
-| [galaxy-hub](https://github.com/galaxyproject/galaxy-hub) | 18 | 12 | 3 | 1 |
+| [galaxy-hub](https://github.com/galaxyproject/galaxy-hub) | 20 | 13 | 3 | 1 |
 | [usegalaxy-tools](https://github.com/galaxyproject/usegalaxy-tools) | 19 | 12 | 0 | 0 |
 | [brc-analytics](https://github.com/galaxyproject/brc-analytics) | 11 | 9 | 11 | 7 |
 | [tools-iuc](https://github.com/galaxyproject/tools-iuc) | 18 | 5 | 5 | 1 |
@@ -45,52 +45,52 @@ The Galaxy Project released version 26.0 release candidate 1 and continued devel
 ## Repository Summaries
 
 ### training-material
-The Galaxy Project training-material repository received updates to external event listings with Love Data Week added, and several organizational changes including new organizations and contributors imported from galaxy-hub along with grants file updates. Tutorial content was enhanced with pre-visualization features and updated steps, while technical maintenance included updates to cached commit data and persistent URLs.
-
-### galaxy-hub
-The Galaxy Project's hub repository received updates to fix multiple technical issues with the Astro framework, including missing images in subdirectories and URL routing problems. Several new event pages were added, including events for Galaxy Tools at University Library Freiburg, a NUBRI kickoff meeting, and updated details for the 2026 Metagenome Training Course and GCC2026 conference. The repository also synchronized content with the Galaxy Training Network materials and imported GTN events and metadata.
+The Galaxy Project training materials repository received updates to organizational information, including new organizations and contributors imported from the galaxy-hub, grants data updates, and the addition of funding organizations like AusBioCommons and UniMelb. Tutorial content was enhanced with pre-visualization features, updated steps, and corrected API key examples. The repository also added information about external events like Love Data Week and updated persistent resource locators.
 
 ### usegalaxy-tools
-This week, the usegalaxy-tools repository received regular automated updates to maintain tool versions across different Galaxy instances, with daily installations of Intergalactic Workflow Commission (IWC) tools for usegalaxy.org and periodic updates to cloud and other repositories. The maintainers also added or updated several specific tools, including egapx (updated to its latest version), lexicmap wrapper (updated to latest version), pysradb_search (newly installed), and chainswap (added to the main .org instance).
+The usegalaxy-tools repository received regular daily updates throughout the week, including repository synchronizations and installations of tools from the Intergalactic Workflow Commission (IWC) for both usegalaxy.org and cloud instances. Several specific tools were updated or added, including egapx (updated to latest version), lexicmap wrapper (latest version), pysradb_search (newly installed), and chainswap (added to the main .org instance).
+
+### galaxy-hub
+This week, the Galaxy Project's galaxy-hub repository focused on event management and content synchronization. Multiple event pages were created or updated, including a Galaxy Tools workshop at University Library Freiburg, a NUBRI kickoff event, and the 2026 Metagenome Training Course, while highlighted talks were added for GCC2026. The team also synchronized training materials from the Galaxy Training Network, added missing schema files, fixed website infrastructure issues in the Astro framework, and published the weekly Galactic Weekly newsletter for 2026-W05.
 
 ### brc-analytics
-The Galaxy Project's brc-analytics repository added LLM-powered natural language search functionality and a white papers section to the homepage while removing the survey card. The team also improved the release workflow to handle different branch versions, enhanced the workflows quality control report, and updated to the latest version of the findable-ui component library.
+The Galaxy Project's brc-analytics repository released version 0.21.0 this week with several new features, including LLM-powered natural language search functionality and a white papers section added to the homepage. The team also configured separate backend URLs for development and production environments, improved the workflows quality control report, and updated the underlying findable-ui library to its latest version.
 
 ### tools-iuc
-This week, the Galaxy Project's tools-iuc repository added three new tools (PIRATE, Mgnify genome search, and datavrzd) and updated existing tools including fastp (to version 1.1.0) and vgp_processcuration (to version 1.1). The team also fixed issues with the mitobim form and resolved a problem affecting Medaka tools version 2.1.1+galaxy0 that was causing failures on Galaxy Australia and other Galaxy instances.
+The Galaxy Project's tools-iuc repository added the PIRATE tool and Mgnify genome search functionality this week, while updating the VGP processcuration tool to version 1.1 and fastp to version 1.1.0. The team also fixed a form issue with the mitobim tool and resolved a problem with Medaka tools that were broken on Galaxy Australia and other Galaxy instances.
 
 ### galaxy
-The Galaxy Project released version 26.0 release candidate 1 and began development on version 26.1, while merging bug fixes from the 25.1 branch. Key changes include adding an AI-powered tool recommendation feature, fixing workflow-related issues like duplicated user sharing entries and HTCondor job monitoring problems, and resolving authentication issues with OIDC usernames and repository credential handling.
-
-### usegalaxy-playbook
-This week, the Galaxy Project's usegalaxy-playbook repository received two new tool installation requests. Users requested the addition of gwtc_analysis for astronomy workflows and bcftools_plugin_split_vep to be installed on the ORG and AU Galaxy instances, as it is currently only available on the EU server.
-
-### galaxy-k8s-boot
-This week, the Galaxy Project's galaxy-k8s-boot repository had one pull request merged that added masthead images to the project. This appears to be a visual enhancement to the user interface components of the Kubernetes-based Galaxy deployment tool.
+The Galaxy Project completed version 26.0.rc1 and began development on version 26.1 this week, with database revisions added for the new major version. Key fixes included resolving workflow-related issues such as storing origin for landing requests, removing the non-functional "Discover Tools" button from the workflow editor, and addressing problems with duplicated entries in user sharing components and storage management for anonymous users.
 
 ### galaxy_codex
-This week, the Galaxy Project's galaxy_codex repository received updates to its imaging lab content and interactive tables functionality. The team also implemented automatic resource updates, upgraded the Ruby setup from version 1.284.0 to 1.286.0, and opened a discussion about promoting peer-reviewed content in Labs, specifically addressing SPOC (Single Point of Contact) implementation.
+This week, the Galaxy Project updated four components of the galaxy_codex repository: the imaging lab, automatic resources system, interactive tables functionality, and the Ruby setup dependency (upgraded from version 1.284.0 to 1.286.0). A new issue was opened to discuss promoting peer-reviewed content in Labs, specifically focusing on SPOC (Single Point of Contact) implementation.
 
-### galaxy-visualizations
-This week, the Galaxy Project's visualization tools repository received four updates focused on bug fixes and feature additions. The changes included restoring a default value, fixing the plot height display in the LocusZoom visualization tool, adding a materializer component to the Polaris tool, and updating the chromosome input type in LocusZoom along with a version upgrade.
+### usegalaxy-playbook
+This week, the Galaxy Project's usegalaxy-playbook repository received two tool installation requests. Users requested the addition of gwtc_analysis for astronomy workflows and bcftools_plugin_split_vep to be installed on the ORG and AU Galaxy instances, as it is currently only available on the EU server.
 
 ### bioblend
 This week, the Galaxy Project's bioblend repository had one merged pull request that added a new method for extracting help text from tools. This enhancement allows developers to programmatically access tool documentation and usage information through the bioblend API.
 
-### galaxy-mcp
-The Galaxy Project's "galaxy-mcp" repository had one merged pull request this week that updated the schema version and bumped the package version to 1.3.0. This appears to be a routine version update for the project's release cycle.
+### galaxy-k8s-boot
+This week, the Galaxy Project's "galaxy-k8s-boot" repository had one merged pull request that added masthead images to the project. This appears to be a visual enhancement to the user interface components of the Kubernetes-based Galaxy deployment system.
 
-### gxy.io
-This week, the Galaxy Project's "gxy.io" repository had one merged pull request that added a JXTX shortener for BoG. The change appears to be a minor addition to the URL shortening functionality of the service.
+### galaxy-visualizations
+This week's activity in the Galaxy Project's visualizations repository focused on bug fixes and feature additions across multiple visualization tools. The team restored a default value setting, fixed plot height issues in the LocusZoom tool, and added a materializer component to the Polaris visualization. Additionally, they updated the chromosome input type in LocusZoom and upgraded it to a newer version.
+
+### galaxy-mcp
+This week, the Galaxy Project's "galaxy-mcp" repository had one merged pull request that updated the schema version and bumped the package version to 1.3.0. The change represents a minor version release with schema modifications, though the specific details of what schema elements were updated are not specified in the available information.
 
 ### iwc
-This week, the Galaxy Project's "iwc" repository had one new issue created regarding testing release 26.0. No other notable activity occurred in terms of pull requests, commits, or other repository changes during this period.
+This week, the Galaxy Project's "iwc" repository had one new issue created titled "Test release 26.0." No other activity details were provided for this time period.
+
+### gxy.io
+This week, the Galaxy Project's "gxy.io" repository had one merged pull request that added a URL shortener functionality specifically for "BoG" (likely referring to "Boards of Governance" or a similar Galaxy Project initiative). The change implements a "jxtx" shortener service to create shortened URLs for BoG-related content.
 
 ### planemo
-This week, one new issue was opened in the Galaxy Project's planemo repository titled "Planemo improvements," though no specific details about the proposed improvements were provided in the summary. No other development activity, such as code commits or pull requests, was mentioned for this period.
+This week, the planemo repository received one new issue titled "Planemo improvements," though no specific details about the proposed improvements were provided in the summary. No other development activity, such as code commits, pull requests, or issue resolutions, was documented for this period.
 
 ### galaxy-release-util
-This week, one new issue was reported for the galaxy-release-util repository concerning the utility incorrectly assuming invalid previous or next release versions. No other development activity, such as commits, pull requests, or releases, was recorded during this period.
+This week, one new issue was reported in the Galaxy Project's galaxy-release-util repository. The issue identifies a problem where the utility appears to make incorrect assumptions about previous or next release versions during the release process.
 
 
 ## Merged Pull Requests
@@ -136,6 +136,7 @@ This week, one new issue was reported for the galaxy-release-util repository con
 - [Add tests for oidc usernames](https://github.com/galaxyproject/galaxy/pull/21655) by @nuwang
 
 ### galaxy-hub
+- [Add Galactic Weekly for 2026-W05](https://github.com/galaxyproject/galaxy-hub/pull/3644) by @nekrut
 - [[astro] missing images in subdirs](https://github.com/galaxyproject/galaxy-hub/pull/3641) by @bgruening
 - [fix multiple smaller things in astro](https://github.com/galaxyproject/galaxy-hub/pull/3640) by @bgruening
 - [Sync: Update files from training-material](https://github.com/galaxyproject/galaxy-hub/pull/3639) by @github-actions[bot]
@@ -301,4 +302,4 @@ This week, one new issue was reported for the galaxy-release-util repository con
 - [Adding AusBioCommons and UniMelb Funding Organisations to Tutorials](https://github.com/galaxyproject/training-material/issues/6608)
 
 ---
-*Generated automatically on 2026-02-01 19:40 UTC*
+*Generated automatically on 2026-02-02 01:29 UTC*
