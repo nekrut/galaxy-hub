@@ -87,9 +87,10 @@ abretaud:
     fediverse_flavor: mastodon
     bluesky: abretaud.bsky.social
     affiliations:
-      - gallantries
-      - eurosciencegateway
       - elixir-europe
+    former_affiliations:
+      - eurosciencegateway
+      - gallantries
 
 abdullahkahraman:
     name: Abdullah Kahraman
@@ -99,7 +100,7 @@ abdullahkahraman:
 abdulrahmanazab:
     name: Abdulrahman Azab
     joined: 2019-01
-    affiliations:
+    former_affiliations:
       - eurosciencegateway
 
 abueg:
@@ -276,7 +277,6 @@ andrewr:
       - minnesotauni
     joined: 2024-05
 
-
 annahenger:
     name: Anna Henger
     github: false
@@ -332,13 +332,15 @@ AnomalyCodes:
 anuprulez:
     name: Anup Kumar
     email: anup.rulez@gmail.com
-    twitter: musafirtweetsz
+    linkedin: anup-kumar-phd-9ab935159
+    orcid: 0000-0002-2068-4695
+    matrix: 'anupkumar:matrix.org'
     joined: 2018-08
     elixir_node: de
     affiliations:
       - uni-freiburg
-      - eurosciencegateway
       - elixir-europe
+      - materialvitaldigital
 
 arash77:
     gtn-halloffame: "no"
@@ -455,6 +457,9 @@ bebatut:
       - gallantries
       - ifb
       - elixir-europe
+    former_affiliations:
+      - uni-freiburg
+      - deNBI
 
 bedroesb:
     name: Bert Droesbeke
@@ -536,15 +541,18 @@ bgruening:
       country: DE
       lat: 47.997791
       lon: 7.842609
-    affiliations:
+    former_affiliations:
       - eurosciencegateway
       - eosc-life
       - by-covid
-      - deNBI
-      - sfb992
+      - crc992
       - elixir-converge
+    affiliations:
+      - deNBI
+      - mwk
       - uni-freiburg
       - elixir-europe
+      - materialvitaldigital
 
 bazante1:
     name: Bazante Sanders
@@ -644,6 +652,7 @@ B0r1sD:
         lon: 3.723
     affiliations:
       - elixir-europe
+    former_affiliations:
       - eurosciencegateway
 
 CameronFRWatson:
@@ -1011,7 +1020,7 @@ jannemarkustoivonen:
     name: Janne Markus Toivonen
     github: false
     joined: 2026-01
-    
+
 jeffreyperkel:
     gtn-halloffame: "no"
     name: Jeffrey Perkel
@@ -1392,6 +1401,8 @@ Sch-Da:
       - elixir-europe
       - nfdi4culture
       - biont
+      - deNBI
+      - mwk
 
 dadrasarmin:
     name: Armin Dadras
@@ -1407,7 +1418,8 @@ dadrasarmin:
     contact_for_training: true
     affiliations:
         - uni-freiburg
-        - eurosciencegateway
+    former_affiliations:
+      - eurosciencegateway
     location:
         country: DE
         lat: 47.997791
@@ -1431,6 +1443,8 @@ davelopez:
     affiliations:
       - eurosciencegateway
       - uni-freiburg
+      - deNBI
+      - mwk
 
 dbrites:
     name: Daniela Brites
@@ -1540,7 +1554,7 @@ elichad:
     email: eli.chadwick@manchester.ac.uk
     orcid: 0000-0002-0035-6475
     joined: 2022-11
-    affiliations:
+    former_affiliations:
       - eurosciencegateway
 
 elifsu-simula:
@@ -1566,10 +1580,10 @@ ElectronicBlueberry:
     joined: 2023-04
     elixir_node: de
     orcid: 0000-0002-2362-9720
-    affiliations:
+    former_affiliations:
+      - eurosciencegateway
       - uni-freiburg
       - elixir-europe
-      - eurosciencegateway
 
 angiolini:
     github: false
@@ -1620,9 +1634,11 @@ erxleben:
     elixir_node: de
     affiliations:
       - uni-freiburg
-      - elixir-europe
     former_affiliations:
       - eurosciencegateway
+      - elixir-europe
+      - deNBI
+      - mwk
 
 estebanpw:
     name: Esteban Perez-Wohlfeil
@@ -1636,7 +1652,7 @@ ethering:
     joined: 2019-10
 
 etzm:
-    name: Martin Etzrodt 
+    name: Martin Etzrodt
     joined: 2026-01
     orcid: 0000-0003-1928-3904
     affiliations:
@@ -1695,6 +1711,7 @@ foellmelanie:
     affiliations:
       - uni-freiburg
       - deNBI
+      - mwk
       - elixir-europe
 
 fpsom:
@@ -1812,6 +1829,7 @@ gmauro:
     former_affiliations:
       - uni-freiburg
       - elixir-europe
+      - deNBI
 
 GokceOGUZ:
     name: Gokce Oguz
@@ -2051,6 +2069,10 @@ jennydg:
 jfallmann:
     name: Joerg Fallmann
     joined: 2017-09
+
+nadinelebris:
+    name: Nadine Le Bras
+    joined: 2026-03
 
 scottedmunds:
     gtn-halloffame: "no"
@@ -2445,6 +2467,7 @@ kostrykin:
     affiliations:
       - elixir-europe
       - deNBI
+      - mwk
 
 KristinaGomoryova:
     name: Kristina Gomoryova
@@ -2466,6 +2489,7 @@ kysrpex:
     affiliations:
       - uni-freiburg
       - elixir-europe
+    former_affiliations:
       - eurosciencegateway
 
 Lain-inrae:
@@ -2497,7 +2521,7 @@ leandro-liborio:
     name: Leandro Liborio
     email: leandro.liborio@stfc.ac.uk
     joined: 2022-11
-    affiliations:
+    former_affiliations:
       - eurosciencegateway
 
 Laura190:
@@ -2571,7 +2595,7 @@ lopiola:
     name: Łukasz Opioła
     joined: 2025-03
     orcid: 0000-0003-1997-932X
-    affiliations:
+    former_affiliations:
       - eurosciencegateway
 
 LonsBio:
@@ -2615,7 +2639,7 @@ poterlowicz-lab:
     elixir_node: uk
     affiliations:
       - elixir-europe
-      
+
 maartenpaul:
     name: Maarten Paul
     email: m.w.paul@lacdr.leidenuniv.nl
@@ -2674,8 +2698,13 @@ MarisaJL:
     affiliations:
       - spoc
       - ou
+      - biofair
+      - elixir-europe
     former_affiliations:
       - uni-freiburg
+    location:
+      country: UK
+    elixir_node: uk
 
 martenson:
     name: Martin Čech
@@ -2693,6 +2722,7 @@ martenson:
     joined: 2017-09
     affiliations:
       - elixir-europe
+    former_affiliations:
       - eurosciencegateway
 
 MarenStillger:
@@ -2861,6 +2891,7 @@ Minamehr:
       - uni-freiburg
       - elixir-europe
       - deNBI
+      - mwk
 
 Mingkai14:
     name: Mingkai Wang
@@ -2877,6 +2908,8 @@ mira-miracoli:
       - uni-freiburg
       - elixir-europe
       - deNBI
+      - mwk
+    former_affiliations:
       - eurosciencegateway
 
 miRlyKayleigh:
@@ -3119,6 +3152,12 @@ nvk747:
     name: Vijay
     joined: 2018-07
 
+ocaisa:
+    name: "Alan O'Cais"
+    joined: 2026-03
+    former_affiliations:
+      - biont
+
 odameron:
     name: Olivier Dameron
     joined: 2020-07
@@ -3207,7 +3246,7 @@ patrick-austin:
     name: Patrick Austin
     email: patrick.austin@stfc.ac.uk
     joined: 2022-11
-    affiliations:
+    former_affiliations:
       - eurosciencegateway
 
 paulineauffret:
@@ -3229,8 +3268,9 @@ pauldg:
     affiliations:
       - by-covid
       - vib
-      - eurosciencegateway
       - elixir-europe
+    former_affiliations:
+      - eurosciencegateway
 
 paulocilasjr:
     name: Paulo Cilas Morais Lyra Junior
@@ -3249,15 +3289,25 @@ paulzierep:
     affiliations:
       - uni-freiburg
       - elixir-europe
+      - deNBI
+      - mwk
+      - materialvitaldigital
 
 pavanvidem:
     name: Pavankumar Videm
     orcid: 0000-0002-5192-126X
+    matrix: 'pavanvidem:matrix.org'
+    elixir_node: de
     joined: 2017-09
     affiliations:
       - uni-freiburg
       - elixir-europe
       - spoc
+      - deNBI
+      - mwk
+    former_affiliations:
+      - crc992
+      - crc1425
 
 PfisterMaxJLU:
     name: Max Pfister
@@ -3438,8 +3488,9 @@ rlibouba:
     matrix: 'rlibouban:matrix.org'
     orcid: 0009-0001-4920-9951
     affiliations:
-      - eurosciencegateway
       - elixir-europe
+    former_affiliations:
+      - eurosciencegateway
 
 rwinand:
     name: Raf Winand
@@ -3477,6 +3528,9 @@ SaimMomin12:
     affiliations:
       - uni-freiburg
       - elixir-europe
+      - eosc-mesh
+      - bge
+    former_affiliations:
       - eurosciencegateway
 
 samanthaanjei:
@@ -3498,6 +3552,7 @@ sanjaysrikakulam:
     affiliations:
       - uni-freiburg
       - elixir-europe
+    former_affiliations:
       - eurosciencegateway
 
 santamccloud:
@@ -3717,6 +3772,7 @@ stain:
     affiliations:
       - by-covid
       - elixir-europe
+    former_affiliations:
       - eurosciencegateway
 
 StellaEggels:
@@ -3827,6 +3883,7 @@ teresa-m:
       - uni-freiburg
       - elixir-europe
       - deNBI
+      - mwk
       - biont
 
 TanguyGen:
@@ -3856,6 +3913,12 @@ thomaswollmann:
     former_affiliations:
       - deNBI
       - elixir-europe
+
+Tillsa:
+    name: Till Sauerwein
+    joined: 2026-03
+    affiliations:
+      - biont
 
 timonschlegel:
     name: Timon Schlegel
@@ -3902,6 +3965,7 @@ torfinnnome:
     elixir_node: "no"
     affiliations:
       - elixir-europe
+    former_affiliations:
       - eurosciencegateway
 
 tseemann:
@@ -3940,6 +4004,10 @@ TKlingstrom:
     affiliations:
       - elixir-europe
 
+TuturBaba:
+    name: Arthur Barreau
+    joined: 2026-03
+
 tvedtees:
     name: Eric Tvedte
     joined: 2024-03
@@ -3952,6 +4020,27 @@ twishigulati:
 tuncK:
     name:  Tunc Kayikcioglu
     joined: 2023-10
+
+unode:
+    name: Renato Alves
+    email: renato.alves@embl.de
+    fediverse: https://mstdn.science/@renato_alves
+    fediverse_flavor: mastodon
+    bluesky: alves-renato.bsky.social
+    matrix: 'renato_alves:matrix.org'
+    orcid: 0000-0002-7212-0234
+    joined: 2026-03
+    bio: Bioinformatics Community Manager at EMBL
+    elixir_node: de
+    contact_for_training: true
+    affiliations:
+      - embl
+      - elixir-europe
+      - biont
+    location:
+      country: DE
+      lat: 49.384622
+      lon: 8.710142
 
 uwwint:
     name: Uwe Winter
@@ -4049,6 +4138,9 @@ wm75:
       - by-covid
       - uni-freiburg
       - elixir-europe
+      - deNBI
+      - mwk
+    former_affiliations:
       - eurosciencegateway
 
 wverastegui:
@@ -4212,7 +4304,7 @@ rmassei:
     joined: 2024-11
     affiliations:
       - nfdi4bioimage
-      - ufz
+      - helmholtz-ufz
 
 sfragkoul:
     name: Stella Fragkouli
