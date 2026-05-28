@@ -11,7 +11,9 @@ contributions:
 
 **Loom** is an AI agent brain for Galaxy bioinformatics. **Orbit** is the Electron desktop shell that wraps it. Together they let you have a conversation about your data, draft and approve analysis plans, route steps to Galaxy or run them locally, and watch everything accumulate in a git-tracked `notebook.md` — the durable project record that persists across sessions.
 
-Loom/Orbit is in **early alpha**. Download from the [Releases page](https://github.com/galaxyproject/loom/releases) and file bugs at [github.com/galaxyproject/loom/issues](https://github.com/galaxyproject/loom/issues).
+<div class="alert alert-warning">
+Loom/Orbit is in <strong>early alpha</strong>. Expect rough edges and breaking changes between releases. Download from the <a href="https://github.com/galaxyproject/loom/releases">Releases page</a> and file bugs at <a href="https://github.com/galaxyproject/loom/issues">github.com/galaxyproject/loom/issues</a>.
+</div>
 
 <!-- TODO: add screenshots -->
 
@@ -39,13 +41,9 @@ Not sure which chip? Open **Apple menu → About This Mac**. "Chip: Apple M..." 
 1. Double-click the DMG and drag **Orbit** to **Applications**.
 2. Eject the DMG.
 
-**First launch (Gatekeeper):** alpha builds are unsigned, so macOS will block the first open. Right-click **Orbit** in Applications → **Open** → click **Open** in the dialog. macOS remembers the decision; subsequent launches work normally.
-
-If the right-click **Open** option is missing, run:
-
-```bash
-xattr -dr com.apple.quarantine /Applications/Orbit.app
-```
+<div class="alert alert-info">
+<strong>First launch (Gatekeeper):</strong> alpha builds are unsigned, so macOS will block the first open. Right-click <strong>Orbit</strong> in Applications → <strong>Open</strong> → click <strong>Open</strong> in the dialog. macOS remembers the decision; subsequent launches work normally. If the Open option is missing, run: <code>xattr -dr com.apple.quarantine /Applications/Orbit.app</code>
+</div>
 
 ### Linux
 
@@ -84,7 +82,9 @@ sudo apt-get install -f
 orbit
 ```
 
-Keep analysis data inside `~/` (the Linux filesystem) — `/mnt/c/` paths are significantly slower across the filesystem boundary.
+<div class="alert alert-warning">
+Keep analysis data inside <code>~/</code> (the Linux filesystem) — <code>/mnt/c/</code> paths are significantly slower across the filesystem boundary. API key encryption via <code>safeStorage</code> is not available in WSL2; keys are stored in plaintext in <code>~/.loom/config.json</code>. Restrict access with <code>chmod 600 ~/.loom/config.json</code>.
+</div>
 
 ### Loom CLI (no desktop)
 
