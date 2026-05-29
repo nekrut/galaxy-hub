@@ -140,14 +140,6 @@ In the **Galaxy** section, enter your Galaxy server URL and API key. The footer 
 
 Click **Save**. The agent restarts with the new configuration.
 
-If you prefer environment variables:
-
-```bash
-export ANTHROPIC_API_KEY="sk-ant-..."
-export GALAXY_URL="https://usegalaxy.org"
-export GALAXY_API_KEY="your-api-key"
-```
-
 ## Selecting a model
 
 Orbit uses a large language model (LLM) as its reasoning engine — the model is what reads your data descriptions, drafts analysis plans, decides how to route steps to Galaxy, and interprets results. Different models are suited to different parts of that workflow.
