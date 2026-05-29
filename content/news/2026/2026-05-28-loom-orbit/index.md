@@ -146,7 +146,7 @@ You can switch models at any point during a session in three ways:
 
 ![Typing /model sonnet in the Orbit chat input](./orbit-model-command.png)
 
-Switching mid-session is intentional — start on a capable model to design the analysis, then drop to a cheaper one before running `/execute`.
+Switching mid-session is intentional — start on a capable model to design the analysis, then drop to a cheaper one.
 
 ### API keys vs. subscription
 
@@ -180,6 +180,15 @@ Orbit needs at least one LLM provider key, and optionally a Galaxy API key for r
 2. Sign in with a Google account.
 3. Click **Get API key → Create API key**.
 4. Copy the key string.
+
+### DeepSeek
+
+1. Go to [platform.deepseek.com](https://platform.deepseek.com/).
+2. Sign in or create an account.
+3. Navigate to **API Keys** in the left sidebar.
+4. Click **Create API Key**, give it a name, and copy the `sk-...` string.
+
+DeepSeek V4 Pro and Flash are very cost-effective — roughly 10–20× cheaper than comparable Anthropic/OpenAI models.
 
 ### Galaxy API key
 
