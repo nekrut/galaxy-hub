@@ -2,8 +2,9 @@
 title: "Loom & Orbit: an AI research harness for Galaxy bioinformatics"
 date: "2026-05-28"
 tease: "Loom turns any working directory into a co-scientist project. Orbit is the Electron desktop shell that puts Galaxy, an AI agent, and your analysis notebook in one window."
-tags: [tools, galaxy, ai, analysis]
+tags: [tools, galaxy, ai]
 subsites: [all]
+autotoc: true
 contributions:
   authorship:
     - nekrut
@@ -41,6 +42,12 @@ Not sure which chip? Open **Apple menu → About This Mac**. "Chip: Apple M..." 
 
 1. Double-click the DMG and drag **Orbit** to **Applications**.
 2. Eject the DMG.
+
+<div class="alert alert-warning">
+<strong>First launch (macOS Gatekeeper):</strong> Alpha builds are unsigned. macOS will block the first launch with "Orbit can't be opened because Apple cannot check it for malicious software."<br><br>
+To open it: right-click <strong>Orbit</strong> in Applications → <strong>Open</strong> → click <strong>Open</strong> in the dialog. macOS remembers the choice — subsequent launches work normally.<br><br>
+Alternatively, run: <code>xattr -dr com.apple.quarantine /Applications/Orbit.app</code>
+</div>
 
 ### Linux
 
@@ -82,6 +89,64 @@ orbit
 <div class="alert alert-warning">
 Keep analysis data inside <code>~/</code> (the Linux filesystem) — <code>/mnt/c/</code> paths are significantly slower across the filesystem boundary. API key encryption via <code>safeStorage</code> is not available in WSL2; keys are stored in plaintext in <code>~/.loom/config.json</code>. Restrict access with <code>chmod 600 ~/.loom/config.json</code>.
 </div>
+
+## Getting API keys
+
+Orbit needs at least one LLM provider key, and optionally a Galaxy API key for routing analysis steps to Galaxy servers.
+
+### Anthropic (Claude)
+
+1. Go to [console.anthropic.com](https://console.anthropic.com/).
+2. Sign in or create an account.
+3. Navigate to **API Keys** in the left sidebar.
+4. Click **Create Key**, give it a name, and copy the `sk-ant-...` string.
+
+### OpenAI
+
+1. Go to [platform.openai.com](https://platform.openai.com/).
+2. Sign in or create an account.
+3. Open **Settings → API keys**.
+4. Click **Create new secret key**, copy the `sk-...` string.
+
+### Google Gemini
+
+1. Go to [aistudio.google.com](https://aistudio.google.com/).
+2. Sign in with a Google account.
+3. Click **Get API key → Create API key**.
+4. Copy the key string.
+
+### DeepSeek
+
+1. Go to [platform.deepseek.com](https://platform.deepseek.com/).
+2. Sign in or create an account.
+3. Navigate to **API Keys** in the left sidebar.
+4. Click **Create API Key**, give it a name, and copy the `sk-...` string.
+
+DeepSeek V4 Pro and Flash are very cost-effective — roughly 10–20× cheaper than comparable Anthropic/OpenAI models.
+
+### Galaxy API key
+
+1. Log in to your Galaxy server (e.g., [usegalaxy.org](https://usegalaxy.org)).
+2. Open **User → Preferences → Manage API Key**.
+3. Click **Create a new key** and copy the key.
+
+## Entering credentials in Orbit
+
+Open Preferences with `Cmd/Ctrl+,` (or click the gear icon, or click the Galaxy connection indicator in the footer).
+
+In the **Provider** section, select your LLM provider (Anthropic, OpenAI, Google, DeepSeek, or other providers), paste the API key, and choose a default model.
+
+In the **Galaxy** section, enter your Galaxy server URL and API key. The footer indicator turns green when the connection is confirmed.
+
+Click **Save**. The agent restarts with the new configuration.
+
+If you prefer environment variables:
+
+```bash
+export ANTHROPIC_API_KEY="sk-ant-..."
+export GALAXY_URL="https://usegalaxy.org"
+export GALAXY_API_KEY="your-api-key"
+```
 
 ## Selecting a model
 
@@ -155,64 +220,6 @@ For most providers — Anthropic, Google, DeepSeek, Mistral, and others — Orbi
 For **OpenAI**, Orbit also supports signing in with your existing ChatGPT subscription. Instead of an API key, you authenticate through a browser sign-in flow (OAuth), and the models run against your subscription rather than the pay-per-token API. This is generally cheaper if you already pay for ChatGPT Plus or Pro. The OpenAI subscription provider is listed as **OpenAI (Codex)** in Preferences; click **Sign in with OpenAI** to authenticate.
 
 Direct subscription auth currently works only for OpenAI. We are exploring whether similar flows can be added for Anthropic (Claude.ai) and Google (Gemini Advanced) in a future release.
-
-## Getting API keys
-
-Orbit needs at least one LLM provider key, and optionally a Galaxy API key for routing analysis steps to Galaxy servers.
-
-### Anthropic (Claude)
-
-1. Go to [console.anthropic.com](https://console.anthropic.com/).
-2. Sign in or create an account.
-3. Navigate to **API Keys** in the left sidebar.
-4. Click **Create Key**, give it a name, and copy the `sk-ant-...` string.
-
-### OpenAI
-
-1. Go to [platform.openai.com](https://platform.openai.com/).
-2. Sign in or create an account.
-3. Open **Settings → API keys**.
-4. Click **Create new secret key**, copy the `sk-...` string.
-
-### Google Gemini
-
-1. Go to [aistudio.google.com](https://aistudio.google.com/).
-2. Sign in with a Google account.
-3. Click **Get API key → Create API key**.
-4. Copy the key string.
-
-### DeepSeek
-
-1. Go to [platform.deepseek.com](https://platform.deepseek.com/).
-2. Sign in or create an account.
-3. Navigate to **API Keys** in the left sidebar.
-4. Click **Create API Key**, give it a name, and copy the `sk-...` string.
-
-DeepSeek V4 Pro and Flash are very cost-effective — roughly 10–20× cheaper than comparable Anthropic/OpenAI models.
-
-### Galaxy API key
-
-1. Log in to your Galaxy server (e.g., [usegalaxy.org](https://usegalaxy.org)).
-2. Open **User → Preferences → Manage API Key**.
-3. Click **Create a new key** and copy the key.
-
-## Entering credentials in Orbit
-
-Open Preferences with `Cmd/Ctrl+,` (or click the gear icon, or click the Galaxy connection indicator in the footer).
-
-In the **Provider** section, select your LLM provider (Anthropic, OpenAI, or Google), paste the API key, and choose a default model.
-
-In the **Galaxy** section, enter your Galaxy server URL and API key. The footer indicator turns green when the connection is confirmed.
-
-Click **Save**. The agent restarts with the new configuration.
-
-If you prefer environment variables:
-
-```bash
-export ANTHROPIC_API_KEY="sk-ant-..."
-export GALAXY_URL="https://usegalaxy.org"
-export GALAXY_API_KEY="your-api-key"
-```
 
 ## Interface overview
 
@@ -293,7 +300,7 @@ Type `/` to open the autocomplete popup. Tab to complete; Enter submits.
 | `/summarize [N [M]]` | Append a summary of prompts N–M into the notebook |
 | `/cost` | Append the session token/cost breakdown to the notebook |
 | `/decisions` | Show the decision log |
-| `/connect [name]` | Open Galaxy connection settings or switch to an existing profile |
+| `/connect` | Open Galaxy connection settings or switch to an existing profile |
 | `/help` | Show the full command list |
 
 ## The notebook
@@ -329,7 +336,7 @@ A **remote** plan maps cleanly to a single Galaxy workflow invocation. A **hybri
 
 In-flight Galaxy invocations are tracked directly in `notebook.md` as fenced YAML blocks:
 
-```
+```yaml
 invocation_id: abc123
 galaxy_server_url: https://usegalaxy.org
 status: in_progress
