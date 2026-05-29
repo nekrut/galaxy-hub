@@ -89,7 +89,7 @@ Orbit uses a large language model (LLM) as its reasoning engine — the model is
 
 Two phases of work call for different models. Designing an analysis — figuring out what to do with a dataset, surveying the literature, or constructing a multi-step plan — benefits from the most capable model you can afford. Actually running the plan — invoking Galaxy tools, polling job status, writing results to the notebook — is mostly repetitive and a cheaper model handles it just as well. When you run `/execute` on an expensive model, Orbit surfaces a one-time reminder suggesting a switch to save cost.
 
-We recommend starting with **Claude Sonnet 4.6** for most sessions: capable enough for demanding work, fast, and roughly 5× cheaper than Opus.
+If you are using Anthropic API keys, we recommend starting with **Claude Sonnet 4.6** for most sessions: capable enough for demanding work, fast, and roughly 5× cheaper than Opus.
 
 **Anthropic (Claude)**
 
