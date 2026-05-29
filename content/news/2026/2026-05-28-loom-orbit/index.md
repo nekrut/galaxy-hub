@@ -20,7 +20,7 @@ Loom/Orbit is in <strong>early alpha</strong>. Expect rough edges and breaking c
 <table class="table" style="border: 1px solid var(--bs-border-color, #dee2e6); border-radius: 6px; overflow: hidden;">
   <thead>
     <tr style="background-color: #2c3143; color: #f0f2f8;">
-      <th style="padding: 10px 16px; font-size: 1rem; letter-spacing: 0.02em;">Just a few examples.</th>
+      <th style="padding: 10px 16px; font-size: 1rem; letter-spacing: 0.02em; color: #f0f2f8;">Just a few examples.</th>
     </tr>
   </thead>
   <tbody>
