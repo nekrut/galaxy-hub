@@ -136,6 +136,8 @@ In the **Provider** section, select your LLM provider (Anthropic, OpenAI, Google
 
 In the **Galaxy** section, enter your Galaxy server URL and API key. The footer indicator turns green when the connection is confirmed.
 
+![Orbit Preferences — Galaxy section showing URL and API key fields](./orbit-preferences-galaxy.png)
+
 Click **Save**. The agent restarts with the new configuration.
 
 If you prefer environment variables:
