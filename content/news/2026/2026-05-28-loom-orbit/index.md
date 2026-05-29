@@ -16,7 +16,26 @@ contributions:
 Loom/Orbit is in <strong>early alpha</strong>. Expect rough edges and breaking changes between releases. File bugs at <a href="https://github.com/galaxyproject/loom/issues">github.com/galaxyproject/loom/issues</a>. You reports help us make it better!
 </div>
 
-![Orbit showing a multi-step Galaxy RNA-seq plan in the chat pane with the live Notebook on the right](./orbit-screenshot-main.png)
+<div class="table-responsive">
+<table class="table" style="border: 1px solid var(--bs-border-color, #dee2e6); border-radius: 6px; overflow: hidden;">
+  <thead>
+    <tr style="background-color: #2c3143; color: #f0f2f8;">
+      <th style="padding: 10px 16px; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase;">Example prompts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 12px 16px; border-top: 1px solid #dee2e6; font-style: italic;">"Summarize current knowledge about PIR gene family in <em>P. vivax</em> and design an analysis that would find the latest long-read assemblies for this species, pull all PIR genes, cluster them into families, and compare their distribution across strains, continents, and genomic locations."</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 16px; border-top: 1px solid #dee2e6; font-style: italic;">"Look at this paper and find all SRA datasets associated with it: <a href="https://pubmed.ncbi.nlm.nih.gov/37769084/">https://pubmed.ncbi.nlm.nih.gov/37769084/</a>. Explain how they are associated with the experimental design described in the paper. Reanalyze the data using the latest version of <em>C. auris</em> genome and compare results to those in the paper."</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px 16px; border-top: 1px solid #dee2e6; font-style: italic;">"My Cut&amp;Run data is in my Downloads folder. Tell me how to analyze it and compare it with expression datasets I analyzed previously."</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 ## Installation
 
