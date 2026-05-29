@@ -35,6 +35,13 @@ Download `Orbit-<version>-arm64.dmg` from the [Releases page](https://github.com
 1. Double-click the DMG and drag **Orbit** to **Applications**.
 2. Eject the DMG.
 
+<div class="alert alert-info">
+<strong>Intel Mac users:</strong> No pre-built installer is available for Intel Macs yet. You can run Orbit directly from source:<br>
+<pre>git clone https://github.com/galaxyproject/loom
+cd loom/app && npm install && npm start</pre>
+Node.js 22.19+ is required (<a href="https://nodejs.org">nodejs.org</a>).
+</div>
+
 ### Linux
 
 | File | Distribution |
