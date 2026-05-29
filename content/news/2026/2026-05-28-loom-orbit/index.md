@@ -215,7 +215,7 @@ Direct subscription auth currently works only for OpenAI. We are exploring wheth
 
 ## Interface overview
 
-![Orbit three-pane layout: Files panel on the left, Chat in the center, Notebook/Activity/File tabs on the right](./orbit-layout.png)
+![Orbit three-pane layout: Files panel on the left, Chat in the center with a plan draft card, and a phylogenetic tree PDF open in the File tab on the right](./orbit-interface-overview.png)
 
 Orbit presents a three-pane layout:
 
