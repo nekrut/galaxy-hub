@@ -132,6 +132,8 @@ Open Preferences with `Cmd/Ctrl+,` or by clicking the Galaxy connection indicato
 
 In the **Provider** section, select your LLM provider (Anthropic, OpenAI, Google, DeepSeek, or other providers), paste the API key, and choose a default model.
 
+![Orbit Preferences — LLM Providers panel showing provider dropdown, model selector, and OpenAI subscription sign-in](./orbit-preferences-llm.png)
+
 In the **Galaxy** section, enter your Galaxy server URL and API key. The footer indicator turns green when the connection is confirmed.
 
 Click **Save**. The agent restarts with the new configuration.
