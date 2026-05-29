@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" width="680" height="340" font-family="system-ui, -apple-system, sans-serif" font-size="14">
+
+  <!-- Background -->
+  <rect width="680" height="340" rx="10" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+
+  <!-- Root node -->
+  <rect x="260" y="18" width="160" height="36" rx="8" fill="#2c3e50" stroke="none"/>
+  <text x="340" y="41" text-anchor="middle" fill="white" font-weight="600" font-size="14">Orbit Installer</text>
+
+  <!-- Root → macOS line -->
+  <line x1="340" y1="54" x2="340" y2="72" stroke="#6c757d" stroke-width="1.5"/>
+  <line x1="340" y1="72" x2="130" y2="72" stroke="#6c757d" stroke-width="1.5"/>
+  <line x1="130" y1="72" x2="130" y2="90" stroke="#6c757d" stroke-width="1.5"/>
+
+  <!-- Root → Linux line -->
+  <line x1="340" y1="72" x2="340" y2="90" stroke="#6c757d" stroke-width="1.5"/>
+
+  <!-- Root → Windows line -->
+  <line x1="340" y1="72" x2="555" y2="72" stroke="#6c757d" stroke-width="1.5"/>
+  <line x1="555" y1="72" x2="555" y2="90" stroke="#6c757d" stroke-width="1.5"/>
+
+  <!-- macOS node -->
+  <rect x="60" y="90" width="140" height="34" rx="7" fill="#1a73e8" stroke="none"/>
+  <text x="130" y="112" text-anchor="middle" fill="white" font-weight="600">macOS</text>
+
+  <!-- Linux node -->
+  <rect x="265" y="90" width="150" height="34" rx="7" fill="#e67e22" stroke="none"/>
+  <text x="340" y="112" text-anchor="middle" fill="white" font-weight="600">Linux</text>
+
+  <!-- Windows node -->
+  <rect x="480" y="90" width="150" height="34" rx="7" fill="#0078d4" stroke="none"/>
+  <text x="555" y="112" text-anchor="middle" fill="white" font-weight="600">Windows</text>
+
+  <!-- macOS → Apple Silicon -->
+  <line x1="130" y1="124" x2="130" y2="144" stroke="#6c757d" stroke-width="1.5"/>
+  <line x1="130" y1="144" x2="70" y2="144" stroke="#6c757d" stroke-width="1.5"/>
+  <line x1="70" y1="144" x2="70" y2="162" stroke="#6c757d" stroke-width="1.5"/>
+
+  <!-- macOS → Intel -->
+  <line x1="130" y1="144" x2="185" y2="144" stroke="#6c757d" stroke-width="1.5"/>
+  <line x1="185" y1="144" x2="185" y2="162" stroke="#6c757d" stroke-width="1.5"/>
+
+  <!-- Apple Silicon leaf -->
+  <rect x="10" y="162" width="120" height="50" rx="6" fill="white" stroke="#1a73e8" stroke-width="1.5"/>
+  <text x="70" y="182" text-anchor="middle" fill="#1a73e8" font-weight="600" font-size="12">Apple Silicon</text>
+  <text x="70" y="197" text-anchor="middle" fill="#495057" font-size="11">arm64.dmg</text>
+  <text x="70" y="209" text-anchor="middle" fill="#6c757d" font-size="10">(M1/M2/M3/M4)</text>
+
+  <!-- Intel leaf -->
+  <rect x="140" y="162" width="90" height="50" rx="6" fill="white" stroke="#1a73e8" stroke-width="1.5"/>
+  <text x="185" y="182" text-anchor="middle" fill="#1a73e8" font-weight="600" font-size="12">Intel</text>
+  <text x="185" y="197" text-anchor="middle" fill="#495057" font-size="11">x64.dmg</text>
+
+  <!-- Linux branches -->
+  <line x1="340" y1="124" x2="340" y2="144" stroke="#6c757d" stroke-width="1.5"/>
+  <line x1="260" y1="144" x2="415" y2="144" stroke="#6c757d" stroke-width="1.5"/>
+  <line x1="260" y1="144" x2="260" y2="162" stroke="#6c757d" stroke-width="1.5"/>
+  <line x1="340" y1="144" x2="340" y2="162" stroke="#6c757d" stroke-width="1.5"/>
+  <line x1="415" y1="144" x2="415" y2="162" stroke="#6c757d" stroke-width="1.5"/>
+
+  <!-- Debian leaf -->
+  <rect x="195" y="162" width="130" height="50" rx="6" fill="white" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="260" y="180" text-anchor="middle" fill="#e67e22" font-weight="600" font-size="12">Debian-based</text>
+  <text x="260" y="195" text-anchor="middle" fill="#6c757d" font-size="10">Ubuntu · Mint · Pop!_OS</text>
+  <text x="260" y="208" text-anchor="middle" fill="#495057" font-size="11">amd64.deb</text>
+
+  <!-- RPM leaf -->
+  <rect x="275" y="162" width="130" height="50" rx="6" fill="white" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="340" y="180" text-anchor="middle" fill="#e67e22" font-weight="600" font-size="12">RPM-based</text>
+  <text x="340" y="195" text-anchor="middle" fill="#6c757d" font-size="10">Fedora · RHEL · openSUSE</text>
+  <text x="340" y="208" text-anchor="middle" fill="#495057" font-size="11">x86_64.rpm</text>
+
+  <!-- Any distro leaf -->
+  <rect x="355" y="162" width="120" height="50" rx="6" fill="white" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="415" y="180" text-anchor="middle" fill="#e67e22" font-weight="600" font-size="12">Any distro</text>
+  <text x="415" y="195" text-anchor="middle" fill="#495057" font-size="11">linux-x64.zip</text>
+  <text x="415" y="208" text-anchor="middle" fill="#6c757d" font-size="10">extract → run orbit</text>
+
+  <!-- Windows branch -->
+  <line x1="555" y1="124" x2="555" y2="162" stroke="#6c757d" stroke-width="1.5"/>
+
+  <!-- Windows leaf -->
+  <rect x="483" y="162" width="144" height="50" rx="6" fill="white" stroke="#0078d4" stroke-width="1.5"/>
+  <text x="555" y="180" text-anchor="middle" fill="#0078d4" font-weight="600" font-size="12">WSL2 + Ubuntu</text>
+  <text x="555" y="195" text-anchor="middle" fill="#6c757d" font-size="10">WSLg GUI support</text>
+  <text x="555" y="208" text-anchor="middle" fill="#495057" font-size="11">amd64.deb via WSL</text>
+
+  <!-- Releases page note -->
+  <text x="340" y="268" text-anchor="middle" fill="#6c757d" font-size="12">All installers: github.com/galaxyproject/loom/releases</text>
+
+  <!-- Chip tip -->
+  <rect x="10" y="282" width="660" height="46" rx="6" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="340" y="300" text-anchor="middle" fill="#856404" font-size="12" font-weight="600">Not sure which Mac chip?</text>
+  <text x="340" y="318" text-anchor="middle" fill="#856404" font-size="12">Apple menu → About This Mac.  "Chip: Apple M…" = arm64   ·   "Processor: Intel…" = x64</text>
+
+</svg>
