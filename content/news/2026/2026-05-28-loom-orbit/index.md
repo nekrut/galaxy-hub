@@ -185,7 +185,7 @@ If you are using Anthropic API keys, we recommend starting with **Claude Sonnet 
 
 Both DeepSeek V4 models support a thinking mode for extended reasoning and a standard mode for direct responses.
 
-**Other providers** — Mistral, Groq, xAI/Grok, and local Ollama models (Qwen3) are available in **Preferences → Provider**. Ollama models run entirely on your machine at no API cost, but need to be installed and configured first. Orbit can help you do that, however you need a computer with a substantial GPU to take advantage of local inference (see [Nekrutenko et al. 2026](https://doi.org/10.64898/2026.05.13.724985)).
+**Other providers** — Mistral, Groq, xAI/Grok, and local Ollama models (Qwen3) are available in **Preferences → Provider**. Ollama models run entirely on your machine at no API cost, but need to be installed and configured first. Orbit can help you do that, however you need a computer with a substantial GPU to take advantage of local inference (see [Nekrutenko 2026](https://doi.org/10.64898/2026.05.13.724985)).
 
 ### Switching models
 
@@ -197,7 +197,7 @@ You can switch models at any point during a session in three ways:
 
 **2. Preferences** — open with `Cmd/Ctrl+,` and choose a different provider or model from the dropdowns, then click Save.
 
-![Orbit Preferences panel showing provider, model, and Galaxy settings](./orbit-preferences.png)
+![Orbit Preferences — LLM Providers panel showing provider dropdown, model selector, and OpenAI subscription sign-in](./orbit-preferences-llm.png)
 
 **3. Slash command in chat** — type `/model <name>` and press Enter. Orbit restarts the agent with the new model immediately. Use the exact model ID (e.g. `/model claude-sonnet-4-6`, not `/model sonnet`).
 
