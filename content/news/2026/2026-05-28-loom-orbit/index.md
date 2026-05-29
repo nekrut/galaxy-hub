@@ -370,6 +370,14 @@ Loom can fetch operational know-how from curated GitHub repos. The default repo 
 
 Add additional skill repos in **Preferences → Skills**. Each entry is a URL under `github.com/galaxyproject/` (arbitrary repos are restricted in alpha to prevent prompt-injection). Fetched skills cache locally for 24 hours to cover offline use.
 
+## Getting help
+
+Questions, bug reports, and feature requests are welcome on the **Galaxy Help forum**:
+
+**[help.galaxyproject.org/c/orbit-support/16](https://help.galaxyproject.org/c/orbit-support/16)**
+
+For bugs and crash reports, use the [GitHub issue tracker](https://github.com/galaxyproject/loom/issues).
+
 ## Related resources
 
 - [Loom/Orbit GitHub](https://github.com/galaxyproject/loom) — source code, releases, issue tracker
