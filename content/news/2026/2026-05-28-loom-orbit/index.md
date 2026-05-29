@@ -185,7 +185,7 @@ If you are using Anthropic API keys, we recommend starting with **Claude Sonnet 
 
 Both DeepSeek V4 models support a thinking mode for extended reasoning and a standard mode for direct responses.
 
-**Other providers** — Mistral, Groq, xAI/Grok, and local Ollama models (Qwen3) are available in **Preferences → Provider**. Ollama models run entirely on your machine at no API cost.
+**Other providers** — Mistral, Groq, xAI/Grok, and local Ollama models (Qwen3) are available in **Preferences → Provider**. Ollama models run entirely on your machine at no API cost, but need to be installed and configured first. Orbit can help you do that, however you need a computer with a substantial GPU to take advantage of local inference (see [Nekrutenko et al. 2026](https://doi.org/10.64898/2026.05.13.724985)).
 
 ### Switching models
 
