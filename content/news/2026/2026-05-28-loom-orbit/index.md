@@ -43,12 +43,6 @@ Not sure which chip? Open **Apple menu → About This Mac**. "Chip: Apple M..." 
 1. Double-click the DMG and drag **Orbit** to **Applications**.
 2. Eject the DMG.
 
-<div class="alert alert-warning">
-<strong>First launch (macOS Gatekeeper):</strong> Alpha builds are unsigned. macOS will block the first launch with "Orbit can't be opened because Apple cannot check it for malicious software."<br><br>
-To open it: right-click <strong>Orbit</strong> in Applications → <strong>Open</strong> → click <strong>Open</strong> in the dialog. macOS remembers the choice — subsequent launches work normally.<br><br>
-Alternatively, run: <code>xattr -dr com.apple.quarantine /Applications/Orbit.app</code>
-</div>
-
 ### Linux
 
 | File | Distribution |
