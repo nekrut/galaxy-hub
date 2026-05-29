@@ -103,18 +103,32 @@ We recommend starting with **Claude Sonnet 4.6** for most sessions: capable enou
 
 | Model | Best for | Price (in/out per 1M tokens) |
 |-------|----------|------------------------------|
+| `gpt-5.4` | Frontier reasoning, complex multi-step analysis | — |
+| `gpt-5.4-mini` | Balanced capability and cost | — |
+| `o3` | Deep scientific reasoning, extended chain-of-thought | — |
+| `o3-mini` | Lightweight reasoning, execution tasks | — |
 | `gpt-4o` | General reasoning, plan drafting | $2.50 / $10 |
-| `gpt-4o-mini` | Execution, low-cost tasks | $0.15 / $0.60 |
-| `o1` | Multi-step scientific reasoning | $15 / $60 |
+| `gpt-4o-mini` | Fast execution, cost-sensitive sessions | $0.15 / $0.60 |
 
 **Google Gemini**
 
 | Model | Best for | Price (in/out per 1M tokens) |
 |-------|----------|------------------------------|
-| `gemini-2.5-pro` | Long-context reasoning, large dataset descriptions | $1.25 / $10 |
-| `gemini-2.5-flash` | Fast execution, cost-sensitive sessions | $0.15 / $0.60 |
+| `gemini-3.1-pro` | Complex reasoning, agentic tasks | $2–$4 / $12–$18 |
+| `gemini-3.5-flash` | Production workloads, sustained performance | $1.50 / $9 |
+| `gemini-3.1-flash-lite` | High-volume, cost-efficient execution | $0.25 / $1.50 |
+| `gemini-2.5-flash-lite` | Fastest, cheapest option | $0.10 / $0.40 |
 
-**Other providers** — Mistral, Groq, xAI/Grok, DeepSeek, and local Ollama models (Qwen3) are available in **Preferences → Provider**. Ollama models run entirely on your machine at no API cost.
+**DeepSeek**
+
+| Model | Best for | Price (in/out per 1M tokens) |
+|-------|----------|------------------------------|
+| `deepseek-v4-pro` | Strong reasoning at very low cost, 1M context | $0.44 / $0.87 |
+| `deepseek-v4-flash` | Fast execution, budget sessions, 1M context | $0.14 / $0.28 |
+
+Both DeepSeek V4 models support a thinking mode for extended reasoning and a standard mode for direct responses.
+
+**Other providers** — Mistral, Groq, xAI/Grok, and local Ollama models (Qwen3) are available in **Preferences → Provider**. Ollama models run entirely on your machine at no API cost.
 
 Switch models at any time mid-session with `/model <name>` — e.g. `/model opus` to upgrade for a hard planning step, then `/model haiku` before running `/execute`.
 
