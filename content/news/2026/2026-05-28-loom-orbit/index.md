@@ -134,17 +134,17 @@ Both DeepSeek V4 models support a thinking mode for extended reasoning and a sta
 
 You can switch models at any point during a session in three ways:
 
-**1. Slash command in chat** — type `/model <name>` and press Enter. Orbit restarts the agent with the new model immediately.
-
-![Typing /model sonnet in the Orbit chat input](./orbit-model-command.png)
-
-**2. Footer model button** — click the model name shown in the footer bar at the bottom of the window. This opens Preferences directly on the provider/model selector.
+**1. Footer model button** — click the model name shown in the footer bar at the bottom of the window. This opens Preferences directly on the provider/model selector.
 
 ![Orbit footer showing Galaxy connection, routing mode, model name, token count and cost](./orbit-footer-model.png)
 
-**3. Preferences** — open with `Cmd/Ctrl+,` and choose a different provider or model from the dropdowns, then click Save.
+**2. Preferences** — open with `Cmd/Ctrl+,` and choose a different provider or model from the dropdowns, then click Save.
 
 ![Orbit Preferences panel showing provider, model, and Galaxy settings](./orbit-preferences.png)
+
+**3. Slash command in chat** — type `/model <name>` and press Enter. Orbit restarts the agent with the new model immediately.
+
+![Typing /model sonnet in the Orbit chat input](./orbit-model-command.png)
 
 Switching mid-session is intentional — start on a capable model to design the analysis, then drop to a cheaper one before running `/execute`.
 
