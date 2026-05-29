@@ -126,7 +126,7 @@ DeepSeek V4 Pro and Flash are very cost-effective — roughly 10–20× cheaper 
 
 ## Entering credentials in Orbit
 
-Open Preferences with `Cmd/Ctrl+,` (or click the gear icon, or click the Galaxy connection indicator in the footer).
+Open Preferences with `Cmd/Ctrl+,` or by clicking the Galaxy connection indicator in the footer.
 
 In the **Provider** section, select your LLM provider (Anthropic, OpenAI, Google, DeepSeek, or other providers), paste the API key, and choose a default model.
 
