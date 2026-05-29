@@ -23,7 +23,6 @@ Loom/Orbit is in <strong>early alpha</strong>. Expect rough edges and breaking c
 All installers are on the [Releases page](https://github.com/galaxyproject/loom/releases).
 
 - **macOS Apple Silicon** (M1/M2/M3/M4) — `Orbit-<version>-arm64.dmg`
-- **macOS Intel** — `Orbit-<version>-x64.dmg`
 - **Linux Debian / Ubuntu / Mint / Pop!\_OS** — `orbit_<version>_amd64.deb`
 - **Linux Fedora / RHEL / CentOS / openSUSE** — `orbit-<version>.x86_64.rpm`
 - **Linux any distro** — `Orbit-linux-x64-<version>.zip` (extract and run `orbit`)
@@ -31,14 +30,7 @@ All installers are on the [Releases page](https://github.com/galaxyproject/loom/
 
 ### macOS
 
-Download the matching `.dmg` from the [Releases page](https://github.com/galaxyproject/loom/releases).
-
-| File | When to use |
-|------|-------------|
-| `Orbit-<version>-arm64.dmg` | Apple Silicon Macs (M1/M2/M3/M4 — anything from late 2020) |
-| `Orbit-<version>-x64.dmg` | Intel Macs |
-
-Not sure which chip? Open **Apple menu → About This Mac**. "Chip: Apple M..." means arm64; "Processor: Intel..." means x64.
+Download `Orbit-<version>-arm64.dmg` from the [Releases page](https://github.com/galaxyproject/loom/releases).
 
 1. Double-click the DMG and drag **Orbit** to **Applications**.
 2. Eject the DMG.
