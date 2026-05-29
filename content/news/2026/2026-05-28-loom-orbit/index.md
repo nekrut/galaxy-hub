@@ -83,31 +83,40 @@ orbit
 Keep analysis data inside <code>~/</code> (the Linux filesystem) — <code>/mnt/c/</code> paths are significantly slower across the filesystem boundary. API key encryption via <code>safeStorage</code> is not available in WSL2; keys are stored in plaintext in <code>~/.loom/config.json</code>. Restrict access with <code>chmod 600 ~/.loom/config.json</code>.
 </div>
 
-## Selecting and authenticating a model
+## Selecting a model
 
-Orbit supports the following LLM providers and models:
+Orbit uses a large language model (LLM) as its reasoning engine — the model is what reads your data descriptions, drafts analysis plans, decides how to route steps to Galaxy, and interprets results. Different models are suited to different parts of that workflow.
+
+A useful mental split: **planning vs. execution.** Drafting a novel analysis, surveying the literature, or reasoning about an unfamiliar dataset benefits from the most capable model you have access to. Running the plan — invoking Galaxy tools, polling job status, writing results to the notebook — is largely mechanical, and a much cheaper model does it equally well. Orbit surfaces a reminder when you run `/execute` on an expensive model, suggesting you switch down to save cost.
+
+We recommend starting with **Claude Sonnet 4.6** for most sessions: capable enough for demanding reasoning, fast, and roughly 5× cheaper than Opus per session.
 
 **Anthropic (Claude)**
-- `claude-opus-4-7` — Opus 4.7 ($15 in / $75 out per M tokens, most capable)
-- `claude-sonnet-4-6` — Sonnet 4.6 ($3 / $15, recommended)
-- `claude-haiku-4-5` — Haiku 4.5 ($1 / $5, cheapest)
-- `claude-opus-4-6` — Opus 4.6 ($15 / $75)
-- `claude-sonnet-4-5` — Sonnet 4.5 ($3 / $15)
+
+| Model | Best for | Price (in/out per 1M tokens) |
+|-------|----------|------------------------------|
+| `claude-opus-4-7` | Complex planning, literature survey, novel analysis design | $15 / $75 |
+| `claude-sonnet-4-6` | General use — planning and execution (recommended) | $3 / $15 |
+| `claude-haiku-4-5` | Mechanical execution of explicit step-by-step plans | $1 / $5 |
 
 **OpenAI**
-- `gpt-4o-mini` — GPT-4o mini ($0.15 / $0.60, cheapest)
-- `gpt-4o` — GPT-4o ($2.50 / $10)
-- `gpt-4-turbo` — GPT-4 Turbo ($10 / $30)
-- `o1-mini` — o1-mini ($3 / $12)
-- `o1` — o1 ($15 / $60)
+
+| Model | Best for | Price (in/out per 1M tokens) |
+|-------|----------|------------------------------|
+| `gpt-4o` | General reasoning, plan drafting | $2.50 / $10 |
+| `gpt-4o-mini` | Execution, low-cost tasks | $0.15 / $0.60 |
+| `o1` | Multi-step scientific reasoning | $15 / $60 |
 
 **Google Gemini**
-- `gemini-2.5-flash` — Gemini 2.5 Flash ($0.15 / $0.60, cheapest)
-- `gemini-2.5-pro` — Gemini 2.5 Pro ($1.25 / $10)
 
-**Other providers** (Mistral, Groq, xAI, DeepSeek, Ollama) are available in Preferences under the provider dropdown.
+| Model | Best for | Price (in/out per 1M tokens) |
+|-------|----------|------------------------------|
+| `gemini-2.5-pro` | Long-context reasoning, large dataset descriptions | $1.25 / $10 |
+| `gemini-2.5-flash` | Fast execution, cost-sensitive sessions | $0.15 / $0.60 |
 
-Prices shown are per million tokens (input / output). Switch models at any time with `/model <id>`.
+**Other providers** — Mistral, Groq, xAI/Grok, DeepSeek, and local Ollama models (Qwen3) are available in **Preferences → Provider**. Ollama models run entirely on your machine at no API cost.
+
+Switch models at any time mid-session with `/model <name>` — e.g. `/model opus` to upgrade for a hard planning step, then `/model haiku` before running `/execute`.
 
 ## Getting API keys
 
