@@ -142,7 +142,7 @@ You can switch models at any point during a session in three ways:
 
 ![Orbit Preferences panel showing provider, model, and Galaxy settings](./orbit-preferences.png)
 
-**3. Slash command in chat** — type `/model <name>` and press Enter. Orbit restarts the agent with the new model immediately.
+**3. Slash command in chat** — type `/model <name>` and press Enter. Orbit restarts the agent with the new model immediately. Use the exact model ID (e.g. `/model claude-sonnet-4-6`, not `/model sonnet`).
 
 ![Typing /model sonnet in the Orbit chat input](./orbit-model-command.png)
 
@@ -274,7 +274,7 @@ Type `/` to open the autocomplete popup. Tab to complete; Enter submits.
 
 | Command | What it does |
 |---------|-------------|
-| `/model <name>` | Switch the LLM model (e.g. `/model sonnet`, `/model claude-opus-4-6`) |
+| `/model <name>` | Switch the LLM model — use the exact model ID (e.g. `/model claude-sonnet-4-6`, not `/model sonnet`) |
 | `/new` | Start a fresh session. Confirms before clearing the existing notebook |
 | `/resume` | Restart the agent and replay the prior session's chat |
 | `/chat` | Restore the chat pane from the session transcript without restarting the agent |
