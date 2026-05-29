@@ -87,9 +87,9 @@ Keep analysis data inside <code>~/</code> (the Linux filesystem) — <code>/mnt/
 
 Orbit uses a large language model (LLM) as its reasoning engine — the model is what reads your data descriptions, drafts analysis plans, decides how to route steps to Galaxy, and interprets results. Different models are suited to different parts of that workflow.
 
-A useful mental split: **planning vs. execution.** Drafting a novel analysis, surveying the literature, or reasoning about an unfamiliar dataset benefits from the most capable model you have access to. Running the plan — invoking Galaxy tools, polling job status, writing results to the notebook — is largely mechanical, and a much cheaper model does it equally well. Orbit surfaces a reminder when you run `/execute` on an expensive model, suggesting you switch down to save cost.
+Two phases of work call for different models. Designing an analysis — figuring out what to do with a dataset, surveying the literature, or constructing a multi-step plan — benefits from the most capable model you can afford. Actually running the plan — invoking Galaxy tools, polling job status, writing results to the notebook — is mostly repetitive and a cheaper model handles it just as well. When you run `/execute` on an expensive model, Orbit surfaces a one-time reminder suggesting a switch to save cost.
 
-We recommend starting with **Claude Sonnet 4.6** for most sessions: capable enough for demanding reasoning, fast, and roughly 5× cheaper than Opus per session.
+We recommend starting with **Claude Sonnet 4.6** for most sessions: capable enough for demanding work, fast, and roughly 5× cheaper than Opus.
 
 **Anthropic (Claude)**
 
@@ -130,7 +130,23 @@ Both DeepSeek V4 models support a thinking mode for extended reasoning and a sta
 
 **Other providers** — Mistral, Groq, xAI/Grok, and local Ollama models (Qwen3) are available in **Preferences → Provider**. Ollama models run entirely on your machine at no API cost.
 
-Switch models at any time mid-session with `/model <name>` — e.g. `/model opus` to upgrade for a hard planning step, then `/model haiku` before running `/execute`.
+### Switching models
+
+You can switch models at any point during a session in three ways:
+
+- Type `/model <name>` in chat — e.g. `/model opus`, `/model haiku`, `/model gemini-3.5-flash`. Orbit restarts the agent with the new model immediately.
+- Click the **model name in the footer** (bottom of the window). This opens Preferences directly on the provider/model selector.
+- Open **Preferences** with `Cmd/Ctrl+,` and choose a different provider or model from the dropdowns.
+
+Switching mid-session is intentional — start a session on a capable model to design the analysis, then drop to a cheaper one before running `/execute`.
+
+### API keys vs. subscription
+
+For most providers — Anthropic, Google, DeepSeek, Mistral, and others — Orbit connects through the provider's API. You pay per token, directly to the provider. Rates are shown in the tables above.
+
+For **OpenAI**, Orbit also supports signing in with your existing ChatGPT subscription. Instead of an API key, you authenticate through a browser sign-in flow (OAuth), and the models run against your subscription rather than the pay-per-token API. This is generally cheaper if you already pay for ChatGPT Plus or Pro. The OpenAI subscription provider is listed as **OpenAI (Codex)** in Preferences; click **Sign in with OpenAI** to authenticate.
+
+Direct subscription auth currently works only for OpenAI. We are exploring whether similar flows can be added for Anthropic (Claude.ai) and Google (Gemini Advanced) in a future release.
 
 ## Getting API keys
 
