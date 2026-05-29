@@ -9,23 +9,23 @@ contributions:
     - nekrut
 ---
 
-**Loom** is an AI agent brain for Galaxy bioinformatics. **Orbit** is the Electron desktop shell that wraps it. Together they let you have a conversation about your data, draft and approve analysis plans, route steps to Galaxy or run them locally, and watch everything accumulate in a git-tracked `notebook.md` — the durable project record that persists across sessions.
+**Orbit** is an AI agent for biological (and not only) data analytics. It lets you have a conversation about your data, draft and approve analysis plans, route steps to Galaxy or run them locally, and watch everything accumulate in a *notebook* — the durable project record that persists across sessions.
 
 <div class="alert alert-warning">
-Loom/Orbit is in <strong>early alpha</strong>. Expect rough edges and breaking changes between releases. Download from the <a href="https://github.com/galaxyproject/loom/releases">Releases page</a> and file bugs at <a href="https://github.com/galaxyproject/loom/issues">github.com/galaxyproject/loom/issues</a>.
+Loom/Orbit is in <strong>early alpha</strong>. Expect rough edges and breaking changes between releases. File bugs at <a href="https://github.com/galaxyproject/loom/issues">github.com/galaxyproject/loom/issues</a>. You reports help us make it better!
 </div>
 
-<!-- TODO: add screenshots -->
-
-![Orbit main interface showing three-pane layout with file tree, chat, and notebook](./orbit-layout.png)
-
-## What it is
-
-Every working directory is a project. Open Orbit (or run `loom` in the terminal) in an analysis directory and an agent session starts. The agent reads and writes `notebook.md` directly — no parallel state store. Plans, decisions, executed steps, and interpretations all accumulate as markdown sections in that single file, giving you a full undo history via `git log` and a reproducible record of every decision.
-
-When Galaxy is configured, the agent surveys Galaxy's workflow registry and tool catalog while drafting plans, then tags each step `[local]`, `[hybrid]`, or `[remote]` depending on whether a matching IWC workflow or heavy Galaxy tool exists. Light exploratory work (parsing, small scripts, `awk`/`jq`) runs locally; alignment, large variant calling, and assembly route to Galaxy.
+![Orbit showing a multi-step Galaxy RNA-seq plan in the chat pane with the live Notebook on the right](./orbit-screenshot-main.png)
 
 ## Installation
+
+**Pick your installer:**
+
+- **macOS Apple Silicon** (M1/M2/M3/M4, late 2020+) → download `Orbit-<version>-arm64.dmg` from the [Releases page](https://github.com/galaxyproject/loom/releases)
+- **macOS Intel** → download `Orbit-<version>-x64.dmg` from the [Releases page](https://github.com/galaxyproject/loom/releases)
+- **Linux — Debian / Ubuntu / Mint / Pop!\_OS** → download `orbit_<version>_amd64.deb` from the [Releases page](https://github.com/galaxyproject/loom/releases)
+- **Linux — Fedora / RHEL / CentOS / openSUSE** → download `orbit-<version>.x86_64.rpm` from the [Releases page](https://github.com/galaxyproject/loom/releases)
+- **Windows** → install WSL2 and use the `.deb` (see below)
 
 ### macOS
 
@@ -40,10 +40,6 @@ Not sure which chip? Open **Apple menu → About This Mac**. "Chip: Apple M..." 
 
 1. Double-click the DMG and drag **Orbit** to **Applications**.
 2. Eject the DMG.
-
-<div class="alert alert-info">
-<strong>First launch (Gatekeeper):</strong> alpha builds are unsigned, so macOS will block the first open. Right-click <strong>Orbit</strong> in Applications → <strong>Open</strong> → click <strong>Open</strong> in the dialog. macOS remembers the decision; subsequent launches work normally. If the Open option is missing, run: <code>xattr -dr com.apple.quarantine /Applications/Orbit.app</code>
-</div>
 
 ### Linux
 
@@ -86,14 +82,31 @@ orbit
 Keep analysis data inside <code>~/</code> (the Linux filesystem) — <code>/mnt/c/</code> paths are significantly slower across the filesystem boundary. API key encryption via <code>safeStorage</code> is not available in WSL2; keys are stored in plaintext in <code>~/.loom/config.json</code>. Restrict access with <code>chmod 600 ~/.loom/config.json</code>.
 </div>
 
-### Loom CLI (no desktop)
+## Selecting and authenticating a model
 
-Run the agent brain from the terminal without Orbit. Requires Node 22+.
+Orbit supports the following LLM providers and models:
 
-```bash
-npm install -g @galaxyproject/loom
-loom
-```
+**Anthropic (Claude)**
+- `claude-opus-4-7` — Opus 4.7 ($15 in / $75 out per M tokens, most capable)
+- `claude-sonnet-4-6` — Sonnet 4.6 ($3 / $15, recommended)
+- `claude-haiku-4-5` — Haiku 4.5 ($1 / $5, cheapest)
+- `claude-opus-4-6` — Opus 4.6 ($15 / $75)
+- `claude-sonnet-4-5` — Sonnet 4.5 ($3 / $15)
+
+**OpenAI**
+- `gpt-4o-mini` — GPT-4o mini ($0.15 / $0.60, cheapest)
+- `gpt-4o` — GPT-4o ($2.50 / $10)
+- `gpt-4-turbo` — GPT-4 Turbo ($10 / $30)
+- `o1-mini` — o1-mini ($3 / $12)
+- `o1` — o1 ($15 / $60)
+
+**Google Gemini**
+- `gemini-2.5-flash` — Gemini 2.5 Flash ($0.15 / $0.60, cheapest)
+- `gemini-2.5-pro` — Gemini 2.5 Pro ($1.25 / $10)
+
+**Other providers** (Mistral, Groq, xAI, DeepSeek, Ollama) are available in Preferences under the provider dropdown.
+
+Prices shown are per million tokens (input / output). Switch models at any time with `/model <id>`.
 
 ## Getting API keys
 
@@ -146,7 +159,7 @@ export GALAXY_API_KEY="your-api-key"
 
 ## Interface overview
 
-<!-- TODO: add labeled interface screenshot -->
+![Orbit three-pane layout: Files panel on the left, Chat in the center, Notebook/Activity/File tabs on the right](./orbit-layout.png)
 
 Orbit presents a three-pane layout:
 
