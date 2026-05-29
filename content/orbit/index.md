@@ -1,6 +1,6 @@
 ---
 title: "Orbit — AI Research Harness for Galaxy"
-tease: "Loom turns any working directory into a co-scientist project. Orbit is the Electron desktop shell that puts Galaxy, an AI agent, and your analysis notebook in one window."
+tease: "Orbit turns any working directory into a co-scientist project. Orbit is the Electron desktop shell that puts Galaxy, an AI agent, and your analysis notebook in one window."
 subsites: [all]
 autotoc: true
 ---
