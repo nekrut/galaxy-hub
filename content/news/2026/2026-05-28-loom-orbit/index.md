@@ -19,7 +19,14 @@ Loom/Orbit is in <strong>early alpha</strong>. Expect rough edges and breaking c
 
 ## Installation
 
-<img src="./installer-tree.svg" alt="Installer decision tree: macOS arm64/x64 dmg, Linux deb/rpm/zip, Windows WSL2 deb" style="max-width:100%;"/>
+All installers are on the [Releases page](https://github.com/galaxyproject/loom/releases).
+
+- **macOS Apple Silicon** (M1/M2/M3/M4) — `Orbit-<version>-arm64.dmg`
+- **macOS Intel** — `Orbit-<version>-x64.dmg`
+- **Linux Debian / Ubuntu / Mint / Pop!\_OS** — `orbit_<version>_amd64.deb`
+- **Linux Fedora / RHEL / CentOS / openSUSE** — `orbit-<version>.x86_64.rpm`
+- **Linux any distro** — `Orbit-linux-x64-<version>.zip` (extract and run `orbit`)
+- **Windows** — WSL2 + Ubuntu, then use the `.deb` (see below)
 
 ### macOS
 
