@@ -117,6 +117,7 @@ Keep analysis data inside <code>~/</code> (the Linux filesystem) — <code>/mnt/
 ## Getting API keys
 
 Orbit needs at least one LLM provider key, and optionally a Galaxy API key for routing analysis steps to Galaxy servers.
+Please be aware that LLM provider key usage may incur cost outside of your subscription. See **API keys vs. subscription** below.
 
 ### Anthropic (Claude)
 
