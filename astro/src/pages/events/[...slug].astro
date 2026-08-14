@@ -18,6 +18,7 @@ import Supporters from '../../components/mdx/Supporters.astro';
 import Contacts from '../../components/mdx/Contacts.astro';
 import MdxIcon from '../../components/mdx/Icon.astro';
 import Insert from '../../components/mdx/Insert.astro';
+import CofestBoard from '../../components/CofestBoard.astro';
 import SupporterGrid from '../../components/content/SupporterGrid.astro';
 import { resolveSupporters } from '../../utils/supporters';
 import { extractFunding, extractAuthors, resolveAuthor } from '../../utils/contributors';
@@ -26,6 +27,8 @@ import ReleaseGuardiansSummary from '../../components/release-guardians/Summary.
 import ReleaseGuardiansSection from '../../components/release-guardians/Section.astro';
 import ReleaseGuardiansLabelPill from '../../components/release-guardians/LabelPill.astro';
 import ReleaseGuardiansCoordination from '../../components/release-guardians/Coordination.astro';
+import ReleaseGuardiansPhase from '../../components/release-guardians/Phase.astro';
+import ReleaseGuardiansRecap from '../../components/release-guardians/Recap.astro';
 
 interface ConferenceNavItem {
   slug: string;
@@ -232,6 +235,9 @@ const components = {
   ReleaseGuardiansSection,
   ReleaseGuardiansLabelPill,
   ReleaseGuardiansCoordination,
+  ReleaseGuardiansPhase,
+  ReleaseGuardiansRecap,
+  CofestBoard,
 };
 
 function toDate(d: Date | string | undefined): Date | null {
